@@ -111,6 +111,57 @@ animation_view_old_code = 'import <RCTAnimation/RCTValueAnimatedNode.h>'
 animation_view_new_code = 'import "RCTValueAnimatedNode.h"'
 patch_pod_file animation_view_file, animation_view_old_code, animation_view_new_code
 
+# fixes for realm-js
+bridge_private_file = 'React/Base/RCTBridge+Private.h'
+bridge_private_old_code = 'import <React/RCTBridge.h>'
+bridge_private_new_code = 'import "RCTBridge.h"'
+patch_pod_file bridge_private_file, bridge_private_old_code, bridge_private_new_code
+
+bridge_file = 'React/Base/RCTBridge.h'
+bridge_old_code = 'import <React/RCTBridgeDelegate.h>'
+bridge_new_code = 'import "RCTBridgeModule.h"'
+patch_pod_file bridge_file, bridge_old_code, bridge_new_code
+
+bridge1_old_code = 'import <React/RCTBridgeModule.h>'
+bridge1_new_code = 'import "RCTBridgeDelegate.h"'
+patch_pod_file bridge_file, bridge1_old_code, bridge1_new_code
+
+bridge2_old_code = 'import <React/RCTDefines.h>'
+bridge2_new_code = 'import "RCTDefines.h"'
+patch_pod_file bridge_file, bridge2_old_code, bridge2_new_code
+
+bridge3_old_code = 'import <React/RCTFrameUpdate.h>'
+bridge3_new_code = 'import "RCTFrameUpdate.h"'
+patch_pod_file bridge_file, bridge3_old_code, bridge3_new_code
+
+bridge4_old_code = 'import <React/RCTInvalidating.h>'
+bridge4_new_code = 'import "RCTInvalidating.h"'
+patch_pod_file bridge_file, bridge4_old_code, bridge4_new_code
+
+bridge_delegate_file = 'React/Base/RCTBridgeDelegate.h'
+bridge_delegate_old_code = 'import <React/RCTJavaScriptLoader.h>'
+bridge_delegate_new_code = 'import "RCTJavaScriptLoader.h"'
+patch_pod_file bridge_delegate_file, bridge_delegate_old_code, bridge_delegate_new_code
+
+javascript_loader_file = 'React/Base/RCTJavaScriptLoader.h'
+javascript_loader_old_code = 'import <React/RCTDefines.h>'
+javascript_loader_new_code = 'import "RCTDefines.h"'
+patch_pod_file javascript_loader_file, javascript_loader_old_code, javascript_loader_new_code
+
+bridge_module_file = 'React/Base/RCTBridgeModule.h'
+bridge_module_old_code = 'import <React/RCTDefines.h>'
+bridge_module_new_code = 'import "RCTDefines.h"'
+patch_pod_file bridge_module_file, bridge_module_old_code, bridge_module_new_code
+
+javascript_executor_file = 'React/Base/RCTJavaScriptExecutor.h'
+javascript_executor_old_code = 'import <React/RCTBridgeModule.h>'
+javascript_executor_new_code = 'import "RCTBridgeModule.h"'
+patch_pod_file javascript_executor_file, javascript_executor_old_code, javascript_executor_new_code
+
+javascript_executor1_old_code = 'import <React/RCTInvalidating.h>'
+javascript_executor1_new_code = 'import "RCTInvalidating.h"'
+patch_pod_file javascript_executor_file, javascript_executor1_old_code, javascript_executor1_new_code
+
 # https://github.com/facebook/react-native/issues/13198
 # Only needed when you have the DevSupport subspec
 has_dev_support = File.exist?(File.join($root, 'Libraries/WebSocket/RCTReconnectingWebSocket.m'))
