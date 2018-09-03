@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'dm-cocoapods-fix-react-native'
-  spec.version       = '0.1.0'
+  spec.version       = '0.2.0'
   spec.authors       = ['David Ehlen (Original: Orta Therox)']
   spec.email         = ['david.ehlen@dm.de']
   spec.description   = "CocoaPods plugin which automates hot-patching React Native"
