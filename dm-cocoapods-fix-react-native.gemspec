@@ -2,13 +2,13 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'cocoapods-fix-react-native'
-  spec.version       = Time.now.strftime("%Y.%m.%d.%H")
-  spec.authors       = ['Orta Therox']
-  spec.email         = ['orta.therox@gmail.com']
+  spec.name          = 'dm-cocoapods-fix-react-native'
+  spec.version       = '0.2.0'
+  spec.authors       = ['David Ehlen (Original: Orta Therox)']
+  spec.email         = ['david.ehlen@dm.de']
   spec.description   = "CocoaPods plugin which automates hot-patching React Native"
   spec.summary       = "CocoaPods plugin which automates hot-patching React Native"
-  spec.homepage      = 'https://github.com/orta/cocoapods-fix-react-native'
+  spec.homepage      = 'https://github.com/dehlen/cocoapods-fix-react-native'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
